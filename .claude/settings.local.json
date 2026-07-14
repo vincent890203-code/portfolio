@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(python3 -m pip install --quiet pypdf)",
+      "Bash(python3 -c ' *)",
+      "Bash(git init *)",
+      "Bash(npm -v)",
+      "Bash(cp \"/Users/yuanchenkuo/Downloads/郭原辰-3.pdf\" \"public/郭原辰.pdf\")",
+      "Bash(npm install *)",
+      "Bash(npm audit *)",
+      "Bash(node -p \"require\\('next/package.json'\\).version\")",
+      "Bash(npm run *)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/app/layout.css\")",
+      "Bash(curl -sI \"http://localhost:3000/_next/static/css/app/layout.css\")",
+      "Bash(curl -s \"http://localhost:3000/\")",
+      "Bash(gh auth *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=郭原辰 -c user.email=vincent890203@gmail.com commit -q -m ' *)",
+      "Bash(git rm *)",
+      "Bash(gh repo *)"
+    ]
+  }
+}
