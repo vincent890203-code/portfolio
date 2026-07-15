@@ -52,9 +52,17 @@ content/            內容資料層(single source of truth)
 ## 開發階段
 
 - [x] **Phase 1** — 網站骨架:Hero、職涯時間軸、聯絡連結、RWD、部署上線
-- [ ] **Phase 2** — 內容管線:Coursera 課程與筆記結構化、作品集頁
+- [x] **Phase 2** — 內容管線:MDX + frontmatter、作品集頁、學習軌跡頁
 - [ ] **Phase 3** — 知識圖譜:互動式 force graph,風格銜接 Hero 粒子網路
 - [ ] **Phase 4** — RAG 第二大腦:向量化知識庫、聊天介面、附引用來源的回答
+
+## 如何新增內容
+
+專案與課程都是 `content/` 下的 `.mdx` 檔:frontmatter 是結構化中繼資料,正文是深度內容。新增或編輯後 `git push` 即自動部署。
+
+- **新專案**:在 `content/projects/` 加一個 `.mdx`(參考現有檔的 frontmatter 欄位)
+- **新課程 / 補筆記**:編輯 `content/courses/*.mdx`,把 `> 我的深度筆記撰寫中。` 換成實際內容
+- **技能標籤**:`skills` 欄位只用 `content/taxonomy.ts` 定義的 key(供 Phase 3 知識圖譜連線)
 
 ## 本地開發
 
