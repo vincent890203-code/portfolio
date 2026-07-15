@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 const SPECIALIZATION = "Software Design and Architecture";
+const SPECIALIZATION_VERIFY_URL =
+  "https://coursera.org/share/8514506302b5d8bded60b9abfc3ede61";
 
 export default function LearningPage() {
   const courses = getAllCourses();
@@ -48,6 +50,14 @@ export default function LearningPage() {
               不是零散選修,而是完成整個 {specCourses.length}{" "}
               門課的軟體設計與架構專項——這正是我朝 Software Architect 前進的骨幹。
             </p>
+            <a
+              href={SPECIALIZATION_VERIFY_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex min-h-[44px] items-center gap-1 font-mono text-xs text-warm transition-colors hover:text-cool"
+            >
+              ✓ 驗證專項總證書
+            </a>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {specCourses.map((c) => (
                 <CourseCard key={c.meta.slug} meta={c.meta} />
