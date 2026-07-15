@@ -1,9 +1,13 @@
+import Link from "next/link";
 import NeuralCanvas from "@/components/NeuralCanvas";
 import RoleTicker from "@/components/RoleTicker";
 import TimelineItem from "@/components/TimelineItem";
+import Nav from "@/components/Nav";
+import ProjectCard from "@/components/ProjectCard";
 import { PROFILE, CREDENTIALS } from "@/content/profile";
 import { TIMELINE } from "@/content/timeline";
 import { LINKS } from "@/content/links";
+import { getFeaturedProjects } from "@/content/loader";
 
 const SECOND_BRAIN = [
   {
@@ -21,8 +25,10 @@ const SECOND_BRAIN = [
 ];
 
 export default function Home() {
+  const featured = getFeaturedProjects();
   return (
     <main className="min-h-screen bg-bg text-text">
+      <Nav />
       {/* Hero */}
       <header className="relative overflow-hidden" style={{ minHeight: "92vh" }}>
         <NeuralCanvas />
@@ -96,6 +102,35 @@ export default function Home() {
               total={TIMELINE.length}
             />
           ))}
+        </div>
+      </section>
+
+      {/* 精選作品 */}
+      <section className="mx-auto max-w-4xl px-6 pb-8">
+        <div className="mb-10 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <h2 className="text-3xl font-bold">精選作品</h2>
+            <span className="font-mono text-xs text-dim">/projects</span>
+          </div>
+          <Link
+            href="/projects"
+            className="font-mono text-sm text-cool transition-colors hover:text-warm"
+          >
+            看全部 →
+          </Link>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          {featured.map((p) => (
+            <ProjectCard key={p.meta.slug} meta={p.meta} />
+          ))}
+        </div>
+        <div className="mt-10">
+          <Link
+            href="/learning"
+            className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-line bg-surface px-5 text-sm text-dim transition-colors hover:border-cool hover:text-cool"
+          >
+            查看學習軌跡與證照 →
+          </Link>
         </div>
       </section>
 

@@ -18,7 +18,13 @@
       "Bash(git add *)",
       "Bash(git -c user.name=郭原辰 -c user.email=vincent890203@gmail.com commit -q -m ' *)",
       "Bash(git rm *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(git push *)",
+      "Bash(set -e)",
+      "Bash(git remote *)",
+      "Bash(git ls-tree *)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "WebFetch(domain:coursera.org)"
     ]
   }
 }

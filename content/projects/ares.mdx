@@ -1,0 +1,29 @@
+---
+title: Ares — 生醫文獻自動化資料管線
+summary: 為解決生醫研究中重複性高的文獻蒐集,設計一個模組化的自動化資料處理工廠。以「工廠」比喻拆分職責,體現對軟體架構的理解與設計模式的實作能力。
+role: 個人專案
+period: 2025/12–進行中
+kind: bridge
+order: 3
+stack: [Python, Selenium, BeautifulSoup, Pandas]
+skills: [dataEngineering, webScraping, python, architecture, designPatterns]
+links: {}
+featured: true
+confidential: false
+---
+
+## 專案定位
+
+Ares 表面上是一支爬蟲,實際上是一個練習「架構思維」的載體——用三層「工廠」隱喻拆分職責,讓每一層都能獨立替換與測試。
+
+## 三層架構
+
+- **Spider(原料採集廠)**:封裝 Selenium 與 BeautifulSoup,處理動態頁面與簡單反爬,自動抓取 PubMed 文獻。
+- **Refinery(資料精煉廠)**:自動化 ETL,把雜亂的 HTML / JSON 轉為乾淨的 Pandas DataFrame。
+- **Brain(智慧處理廠)**:預留機器學習模型的接口,做關鍵資訊萃取與生成。
+
+## 專案成果
+
+把原本耗時的人工文獻整理壓縮到分鐘級,並產出可重複使用的 Python codebase——證明我開發中型程式專案的工程能力。
+
+> 深度內容與程式碼連結持續補充中。
