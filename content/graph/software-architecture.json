@@ -1,0 +1,3661 @@
+{
+  "meta": {
+    "title": "軟體設計與架構",
+    "source": "Heptabase"
+  },
+  "nodes": [
+    {
+      "id": "ab51fe44-f213-49e2-9e0a-09375a3e48a0",
+      "title": "Black Box Thinking",
+      "category": "meta",
+      "layer": 1,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "黑箱思維：把元件視為只看輸入輸出、不管內部的黑箱，對應抽象與封裝。",
+      "degree": 1,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "f6fda5d6-f658-404c-bbc8-cd8591f530b9",
+      "title": "Conceptual Integrity → Consistent Software",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "概念完整性：讓系統遵循一致的設計理念，是產出一致、好用軟體的關鍵。",
+      "degree": 1,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "babf49b2-7ddd-4def-9a1c-11c08349cf6d",
+      "title": "Conway's Law",
+      "category": "meta",
+      "layer": 1,
+      "section": "Architecture",
+      "summary": "系統架構會反映設計它的組織溝通結構；組織與架構相互形塑。",
+      "degree": 2,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "908d8186-3aef-476e-a757-b05d145d7b25",
+      "title": "Design Patterns 在 AI 世代的角色轉變",
+      "category": "meta",
+      "layer": 1,
+      "section": "種子筆記",
+      "summary": "在 AI 輔助開發時代，設計模式從記憶範式轉為判斷與溝通的共同語言。",
+      "degree": 0,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "522b1f1c-2cd4-498a-9e1d-212632b8e8d6",
+      "title": "Design Patterns 的本質是 trade-off 的結晶",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "設計模式是前人針對反覆出現問題所累積的權衡解法結晶，本質是 trade-off。",
+      "degree": 2,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "title": "Design in the Software Process",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "設計在整體軟體開發流程中的定位與角色。",
+      "degree": 5,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "9dc4d103-a03a-4f4f-ae83-1c2671c9af16",
+      "title": "一旦開始寫 code 並依賴某些假設，要改變這些假設就變得非常困難",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "程式一旦依賴某些假設，之後要改變這些假設成本極高，故設計時要延後承諾。",
+      "degree": 1,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "af3f0b5a-662b-4f69-8594-b9074caaf243",
+      "title": "守破離是否有神經科學基礎？",
+      "category": "meta",
+      "layer": 1,
+      "section": "種子筆記",
+      "summary": "探討守破離學習模型是否有神經科學上的依據。",
+      "degree": 0,
+      "noteType": "question",
+      "gaps": [
+        {
+          "key": "open-question",
+          "reason": "你提的問題還沒收斂成洞察"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.0
+    },
+    {
+      "id": "54576cbd-5b50-421d-a481-b752c89ec499",
+      "title": "工程師想做到完美，但商業壓力要快速上市",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "Quality vs. Time to Market 的權衡：工程完美主義對上快速上市的商業壓力。",
+      "degree": 2,
+      "noteType": "concept-collision",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "46153885-ca57-4ae1-aee9-22e2c2c63ede",
+      "title": "技藝習得的本質：從模仿到自由",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "技藝學習遵循守破離：先模仿範式、再拆解、最後達到自由運用的境界。",
+      "degree": 1,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "0e298b7b-f2f8-4622-8a95-d516b1770343",
+      "title": "架構師本業 - 權衡最適配系統",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "架構師的核心工作是在各種限制與品質屬性之間權衡，找出最適配該問題的系統。",
+      "degree": 2,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "da6fc19f-11fb-4431-87fb-721a665684ac",
+      "title": "架構師的核心能力是 Trigger 識別，而 Trigger 識別起於模仿",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "架構師的關鍵能力是辨識何時該套用某模式（trigger），此識別能力起於大量模仿。",
+      "degree": 2,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "87004dae-5548-4e4f-b651-4f9d97877d48",
+      "title": "查詢業界實際做法",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "遇到設計取捨時查詢業界實際做法作為決策參考的學習筆記。",
+      "degree": 0,
+      "noteType": "question",
+      "gaps": [
+        {
+          "key": "open-question",
+          "reason": "你提的問題還沒收斂成洞察"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.0
+    },
+    {
+      "id": "5191279b-977d-4793-a96f-d87bab07f1c5",
+      "title": "總結",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "章節或主題的統整總結筆記。",
+      "degree": 0,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "a4e88a5f-3bc1-4750-bf9c-3357d2ac9ed6",
+      "title": "軟體設計與架構（總覽）",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "本知識庫的根節點：軟體設計與架構主題的整體脈絡總覽。",
+      "degree": 0,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "title": "需求核心在於權衡 (Trade-off)",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "軟體需求的核心是在相互競爭的目標間做權衡，沒有絕對正解只有取捨。",
+      "degree": 5,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "3cdef23d-17ea-4258-8c7e-e7788d43d4a3",
+      "title": "高效能的程式碼通常不夠模組化，難以維護",
+      "category": "meta",
+      "layer": 1,
+      "section": "",
+      "summary": "Performance vs. Maintainability 的權衡：追求高效能常犧牲模組化與可維護性。",
+      "degree": 2,
+      "noteType": "concept-collision",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "e6b5192f-afff-448b-a6a7-3caa81dccb30",
+      "title": "Abstraction —> Class",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "抽象：抓住問題本質忽略無關細節，在程式中以 class 表達。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "fd7a03ca-8e46-4be9-b7f1-d473cbad274c",
+      "title": "Coupling 與 Cohesion",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "低耦合（模組間依賴少）、高聚合（模組內職責集中）是良好設計的核心指標。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "a3a06767-1e6c-4d64-948e-11eff923eed2",
+      "title": "Decomposition",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "分解：將複雜系統切成較小、可獨立處理的部分。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "8abab9c2-705d-438d-8301-883b11d0b480",
+      "title": "Decomposition in UML and Java",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Apply",
+      "summary": "分解：把大問題拆成較小的部分，在 UML 與 Java 中的表達方式。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "61777a84-21ad-4215-b98c-3c237ce0b532",
+      "title": "Encapsulation",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "封裝：把資料與操作綁在一起並隱藏內部細節，只暴露必要介面。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "a79322d4-20c4-49fd-bbc0-ec93b869226d",
+      "title": "Encapsulation in UML and Java",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "封裝在 UML 可見性標記與 Java access modifier 中的表達。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "b80293ad-bd4d-4d69-afbd-0e430b34af97",
+      "title": "Generalization",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "第二層 - 底層 Principle 設計時的思維工具",
+      "summary": "一般化：抽取多個類別的共通性形成父類，與繼承對應。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "1e849702-632b-4792-b17e-6b3c7b547f3d",
+      "title": "Information Hiding 與存取控制",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "封裝背後的動機：隱藏會變的實作、以 interface 暴露不變行為；Java 四層 access modifier 對應設計邊界。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "bc9eaec3-c34b-4d11-9e5b-d999a4252c26",
+      "title": "Instance 就是 class 被實際建立出來的那個東西",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "instance 是 class 藍圖被實際實例化後的具體物件。",
+      "degree": 1,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "3caf9638-b245-45f9-bfe3-2609d142accb",
+      "title": "Interface",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "介面定義一組行為契約，讓不同實作可被替換，是解耦與多型的基礎。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "8ae0390c-b109-4d55-9a4a-25690e6cadc2",
+      "title": "Interface",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "介面作為行為契約在設計中的角色與用法。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "f92c8764-f9d5-47b1-8331-7cb1ed50a5af",
+      "title": "Interface and Polymorphism",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "介面搭配多型：以共同介面讓不同實作可被替換與統一處理。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "6774c2cf-f38c-4860-9ff7-82bec23c7761",
+      "title": "Interface v.s. Inheritance",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "介面（能做什麼／has-behavior）與繼承（is-a）的差異與選用時機。",
+      "degree": 3,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "dc3f0694-679c-440b-806f-20d64a20cb8a",
+      "title": "Java 基礎 OOP 概念",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "以 Java 說明類別、物件、繼承、封裝等基礎物件導向概念。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "cf802782-10b7-4c77-befb-e4da7421d495",
+      "title": "OOP 解決問題",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "物件導向針對程序式範式的痛點所提出的解法與動機。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "fa2199b9-9b16-4197-ab0a-bd6b9aa0953b",
+      "title": "Object-Oriented Modelling Overview",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "物件導向建模的整體概觀：概念、方法與流程。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "6245d233-0e1b-496e-8fcc-3a7320abd710",
+      "title": "Polymorphism",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Design Pattern",
+      "summary": "多型：同一介面依實際型別展現不同行為，是抽象與擴展的基礎。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "19a04ede-9857-4c99-a25f-d32ac497152a",
+      "title": "Separation of Concerns",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "把不同問題切開讓每個模組只負責該負責的事，是 abstraction/encapsulation 等原則的共同動機。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "eca36852-d6dc-49e7-8578-8dca4e6cd5e7",
+      "title": "不適合 OOP 的場景舉例",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "Architecture",
+      "summary": "舉例說明哪些情境（如純計算、資料流）不適合套用物件導向。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "30577c75-0ed8-431b-b1d7-fb6712225516",
+      "title": "低耦合高聚合的優質程式碼需要明確的文件需求",
+      "category": "oop-concept",
+      "layer": 2,
+      "section": "",
+      "summary": "要寫出低耦合高聚合的程式碼，前提是有清楚定義的需求與職責邊界文件。",
+      "degree": 1,
+      "noteType": "question",
+      "gaps": [
+        {
+          "key": "open-question",
+          "reason": "你提的問題還沒收斂成洞察"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.0
+    },
+    {
+      "id": "ad616507-a61a-40a1-a637-9556424fce3b",
+      "title": "Code Smells & Refactoring",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "辨識程式壞味道（duplicated code、過長方法等）並以重構改善設計。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "bcf7a256-b273-4ffc-b821-61216bf50d33",
+      "title": "Comments 過多",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "過多註解常是壞味道，暗示程式碼本身表達力不足，應以重構取代註解。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "9c279b83-6e6d-4df7-aac1-82296ed959f6",
+      "title": "Composing Objects Principle",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "以物件組合取代繼承來複用行為，達成更低耦合與執行期可組合。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "0670698d-584f-4dbf-9f9e-a9689ad7f2a0",
+      "title": "DRY — Don't Repeat Yourself",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "每個知識或邏輯在系統中只該有唯一表達點；針對的是邏輯重複而非字面重複。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "a1a31571-d992-493e-8adf-50117e205677",
+      "title": "Dependency Inversion Principle (DIP)",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "高低層都依賴抽象而非具體實作，換實作不動用戶端。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "04b62dd4-c5e1-4a6f-8931-4dbe44ba994a",
+      "title": "Duplicated Code",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "同樣邏輯出現兩次就抽出共用（DRY）；否則改一處忘另一處會產生難發現的 bug。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "d306e3d6-6937-408e-8af9-ab9dea9e0538",
+      "title": "Inheritance 誤用與 Liskov 替換原則",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "以 LSP 判斷繼承是否被誤用：子類不能違反父類的行為契約。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "9f2df446-0339-428d-b583-2251761f657d",
+      "title": "Interface Segregation Principle",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "用戶端不該被迫依賴用不到的方法，應把大介面拆成語意精確的小介面。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "78a882b5-3cf9-4101-b667-c9a677bb9e11",
+      "title": "LSP - Liskov Substitution Principle",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "子型別必須能替換其父型別而不破壞正確性，是繼承正確使用的準則。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "cbea811d-d58b-4d08-af82-e8a9d11c5080",
+      "title": "Law of Demeter",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "最少知識原則：只跟直接朋友說話，避免 a.getB().getC() 的長呼叫鏈以降低耦合。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "18941894-8d2c-4f67-870f-e2a713c98884",
+      "title": "OCP - Open/Closed Principle",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "對擴展開放、對修改封閉：穩定部分不動，變化部分透過繼承或介面往外長。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "6058e36c-e07b-429a-baf7-1004dd8ea1ed",
+      "title": "SRP - Single Responsibility Principle",
+      "category": "principle",
+      "layer": 3,
+      "section": "第三層 - SOLID寫程式時的規則",
+      "summary": "一個模組/類別只該有一個改變的理由，只負責一件事。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "80a6ea82-85ee-42b7-ae44-edb5ea207484",
+      "title": "依賴鏈方向是判斷高層/底層的標準",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "以依賴鏈的指向判斷模組高低層；DIP 要求高低層都依賴抽象。",
+      "degree": 1,
+      "noteType": "permanent",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "857f768e-64ff-419e-87c6-2d23e941d148",
+      "title": "重構邏輯 - 安全拆解的鐵律",
+      "category": "principle",
+      "layer": 3,
+      "section": "",
+      "summary": "安全重構的準則：小步前進、保持行為不變、每步可驗證。",
+      "degree": 0,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "caf8a1ef-000c-448e-a7c1-86e0ce810fe4",
+      "title": "API & Facade Patterns",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "API 作為 Facade：以簡化介面對外隱藏內部子系統複雜度。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "abd11823-74d5-4495-a210-cba25ce44f32",
+      "title": "Adapter Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "在不改兩端程式碼下加中間翻譯層，讓不相容的介面能協同運作。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "5ae03416-11da-47c5-9951-9ffdf929c38d",
+      "title": "Aggregation Stack",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以堆疊式聚合結構組合物件，用於 Composite/Decorator 的層層包裝情境。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "b74a4514-e2ac-45b8-9882-da2eeeb754e6",
+      "title": "Aggregation Tree",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以樹狀聚合結構組織物件，對應 Composite 的層級組合。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "title": "Behavioural Patterns",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "行為型模式：處理物件間職責分配與互動，如 Observer、Strategy、Command、State。",
+      "degree": 7,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "synthesis",
+          "reason": "樞紐級素材密集,最適合做一次綜合"
+        }
+      ],
+      "focusScore": 5.0
+    },
+    {
+      "id": "d48cd2cc-6c72-4ab5-8ece-d4d4c3cd07d7",
+      "title": "Cache 預熱",
+      "category": "implementation",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "在服務啟動時預先載入快取，避免首次請求的冷啟動延遲。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "485d22f4-4ce2-4a35-9926-fce99adb3add",
+      "title": "Chain of Responsibility Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "讓多個 handler 串成鏈依序嘗試處理請求，sender 不需知道由誰接手，可動態調整順序。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "1c5dd5a1-46bf-4a4a-a82a-5680302c3409",
+      "title": "Command Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把請求封裝成物件，解開「誰發出」與「誰執行」的綁定，支援 undo/redo、queue、log、macro。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "45c00ef7-109c-4471-bdef-3e331c79b63b",
+      "title": "Command Pattern 實作",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Command Pattern 的程式實作範例：把動作封裝成可傳遞、可執行的命令物件。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "8d1230d5-0d29-4d24-a75e-ad8123ab9ed1",
+      "title": "Composite Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以樹狀結構統一對待單一物件與物件集合，用同一套操作遞迴組合。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "a2bc2280-a9be-4f99-9620-c070df943362",
+      "title": "Composite Pattern Python 實作",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以 Python 實作 Composite：統一處理葉節點與組合節點的樹狀結構。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "b852c249-ea62-4803-b0a5-a890bd5ac7ce",
+      "title": "Creational Patterns",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "建立型模式：封裝物件建立過程，如 Singleton、Factory Method。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "title": "Decorator Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "在執行期以同型別包裝動態疊加行為，避免多重繼承造成的類別爆炸。",
+      "degree": 5,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "2a335fc8-fc23-4247-ac3d-a8147b3c2366",
+      "title": "Decorator Pattern 與 Inheritance 的比較",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Inheritance 編譯期決定行為、Decorator 執行期疊加同型別行為；獨立可組合行為用 Decorator 免類別爆炸。",
+      "degree": 1,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "82fc0de5-7ad0-4992-9e8e-c636cad87bae",
+      "title": "Design Patterns — Gang of Four 概覽",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "",
+      "summary": "GoF 23 個設計模式的 Creational/Structural/Behavioural 三大分類概覽。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "671f506d-79b5-4822-8ac2-19349411ddb9",
+      "title": "Facade Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "為複雜子系統提供單一簡化介面，降低用戶端與子系統的耦合。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "e17df596-2fd2-4dfd-b2fd-3aa061e18aa8",
+      "title": "Facade Pattern Summary",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Facade 的用途整理：以單一介面隱藏子系統複雜度、降低耦合。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "e57ef283-236d-4775-9270-6c92d3abbb5d",
+      "title": "Factory Object & Factory Method Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把物件建立邏輯集中封裝，讓用戶端依賴介面、新增產品不動既有程式。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "b5f1115f-4caa-44fe-a91b-473f9d711b97",
+      "title": "Factory Object & Method Pattern Summary",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Factory 封裝物件建立：Factory Object 與 Factory Method 的用途與差異整理。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "2a72da4c-a478-430b-993c-28c037359507",
+      "title": "MVC Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把有 UI 的系統拆成 Model（資料）、View（呈現/Observer）、Controller（協調），三者可獨立開發。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "9f0bc546-57ae-4e47-9af2-e5e54cb05bd0",
+      "title": "Observer Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "定義一對多相依，Subject 狀態改變時自動通知並更新所有 Observer。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "9bb8cc36-4797-4b59-be39-c17f5f805551",
+      "title": "Observer Pattern = Event-Based",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Architecture",
+      "summary": "Observer 讓 Subject 狀態變化自動通知多個 Observer，等同事件驅動的解耦機制。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "1b56b7d6-a1df-4888-805d-fde7f02968ad",
+      "title": "Pattern Trade-off",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "",
+      "summary": "各 GoF pattern 與原則的觸發條件、收益與代價對照表，用於判斷何時該套用哪個 pattern。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "title": "Pattern 名稱（Pattern 目錄）",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "設計模式的分類目錄，串接 Creational/Structural/Behavioural 與 MVC 等 pattern。",
+      "degree": 5,
+      "noteType": "raw",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "dd429fa0-a9f9-4fb6-87c1-f972b7dca234",
+      "title": "Proxy Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以代理物件控制對真實物件的存取，支援延遲建立、存取控制或遠端代理。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "6f94f29d-0127-452e-beaf-659ea5b9eca9",
+      "title": "Python Proxy 實作",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以 Python 實作 Proxy Pattern：在不改用戶端介面下加入延遲載入或存取控制。",
+      "degree": 2,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "39388ab6-c241-4b91-8fdf-0bcffd4ea436",
+      "title": "Singleton Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "確保某類別只有一個實例並提供全域存取點，適用於設定、Logger、連線池等。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "92775254-546d-40fc-8734-9941d65e9dfc",
+      "title": "Singleton Pattern Summary",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Singleton 的用途、lazy creation、thread-safe 與難測試等重點整理。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "f9dcfddc-1825-4347-b862-9674b9f665e2",
+      "title": "State Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把隨狀態改變的行為封裝成狀態類別，以物件替換消除大量 if-else 狀態判斷。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "31b98f1c-d5c6-478e-b0b1-98f497602fcd",
+      "title": "Strategy Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把可替換的演算法各自封裝成類別，讓行為可在執行期切換而不改用戶端。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "title": "Structural Patterns",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "結構型模式：處理類別/物件的組合，如 Adapter、Facade、Proxy、Composite、Decorator。",
+      "degree": 5,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "title": "Template Method Pattern",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "在 superclass 固定流程骨架，讓 subclass 只實作差異步驟，減少重複。",
+      "degree": 6,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "b7271804-1e3f-4c2b-8476-183132d6d59e",
+      "title": "Template Method Pattern 實作",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Template Method 的實作範例：固定流程骨架、subclass 覆寫差異步驟。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "d5ccc19b-2d72-4fa6-a428-60646af53a98",
+      "title": "db connection 拆解",
+      "category": "implementation",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "把資料庫連線建立與生命週期管理從業務邏輯中拆出，降低耦合、利於測試。",
+      "degree": 2,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "7106f93d-d69c-4198-8744-cd1086103d01",
+      "title": "前端 & Facade Patterns",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "前端如何以 Facade 包裝後端複雜子系統，對外提供簡單介面。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "579d0b00-ed24-4977-b650-cf32986767dd",
+      "title": "某語音專案：Factory 實作",
+      "category": "implementation",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以 Factory 封裝物件建立邏輯，新增產品類型時只加子類、不動呼叫端（coding to interface）。",
+      "degree": 1,
+      "noteType": "project",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "1812e9d5-6f35-457f-8ceb-b7a5f5874c68",
+      "title": "某語音專案：Module-level Singleton",
+      "category": "implementation",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以模組層級 lazy singleton（get_settings）收斂散落的全域設定，只初始化一次且可在測試中 mock。",
+      "degree": 4,
+      "noteType": "project",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "7405197f-b69c-4255-9390-4f645d8af3bd",
+      "title": "為什麼 Adapter 不能是 Interface",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "Adapter 需具體翻譯不相容介面的轉接邏輯，因此不能只是一個純介面。",
+      "degree": 1,
+      "noteType": "question",
+      "gaps": [
+        {
+          "key": "open-question",
+          "reason": "你提的問題還沒收斂成洞察"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.0
+    },
+    {
+      "id": "409e5e23-39e2-4af3-b2e7-627e0731ff96",
+      "title": "用 Python 理解 MVC",
+      "category": "design-pattern",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "藉由 Python 範例理解 MVC 三層職責與資料流。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "125d051c-a3c3-48a3-a0bb-8de4dd224b58",
+      "title": "重構",
+      "category": "implementation",
+      "layer": 4,
+      "section": "Design Pattern",
+      "summary": "以 SRP 拆解混雜 HTTP 與業務邏輯的 router，讓 service 可獨立測試、兩邊互不影響。",
+      "degree": 1,
+      "noteType": "project",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "175ee54e-cded-4161-adbb-262bacc61943",
+      "title": "(解耦方法) Implicit Invocation",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "當一個觸發點有多個且會變動的下游時，用 event-based 隱式呼叫取代 explicit 直呼以解耦。",
+      "degree": 2,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "d526cc36-1644-44f7-b190-5568babf140c",
+      "title": "Analyzing and Evaluating an Architecture",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以品質屬性與情境為基礎分析與評估架構的方法。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "title": "Architectural Style",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "架構風格的總覽節點，串接各種系統結構風格（分層、資料中心、事件驅動等）。",
+      "degree": 7,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "synthesis",
+          "reason": "樞紐級素材密集,最適合做一次綜合"
+        }
+      ],
+      "focusScore": 5.0
+    },
+    {
+      "id": "299fb0e5-e625-416f-aeb0-fed19b6209e2",
+      "title": "Client-Server n-Tier (multi-Tier)",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以 Request-Response 分層的多層架構，各 tier 可同時扮演 server 與 client，體現關注點分離。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "36f53ad8-c2e4-40d4-ae83-7dc7e989a37f",
+      "title": "Data-Centric Software Architecture",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以被動的中央資料元件搭配主動的 data accessors，利於資料共享、擴展與 DBMS 最佳化。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "e9ac9cdd-fbfc-4428-90a4-561a3a92dd5d",
+      "title": "Dataflow Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以資料流動驅動計算、資料在處理單元間流動的資料流系統。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "7895b8a7-9515-4a70-9292-08ddb60e6704",
+      "title": "Event-Based Architectural Style",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以事件發布/訂閱驅動元件互動，發送者不需知道接收者，高度解耦。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "26d944d0-98f2-456e-b017-bea0950ff059",
+      "title": "Event-Based Architectural Style 權衡",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "Event-based 風格的優缺點權衡：高解耦與擴展性，但流程追蹤與除錯較困難。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "3a3ccc94-0d0c-4554-a7bd-be0adc82cbc5",
+      "title": "How to trade off? → Quality Attributes",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "架構本身無好壞、只有適不適合；用品質屬性作為衡量架構適配度的工具。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "c96770c6-cda7-4038-813f-e9fecea60696",
+      "title": "Implicit Invocation Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以隱式呼叫（事件觸發）而非直接呼叫來串接元件的系統風格。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "79c2620c-663b-46dd-a1aa-117fca15f9fd",
+      "title": "Interpreter-Based Architecture",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以直譯器執行領域語言/規則的架構風格。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "3f2d2a43-f3ec-416f-b702-27755ba8f452",
+      "title": "Interpreter-based Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以直譯器讀取並執行語言/規則描述的系統風格。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "2e45e93f-46c3-4ba9-b4cd-b7bf98a7b11f",
+      "title": "Language-based Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以語言/直譯機制為核心的系統風格，程式作為被解讀執行的語言描述。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "551780b2-169f-48a8-9683-3055274620aa",
+      "title": "Layered Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "分層架構：上層依賴下層提供的服務，關注點依層次分離。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "d3089af0-1e7a-4996-ae42-f38b224e805d",
+      "title": "Layered Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "分層系統：功能按抽象層次堆疊，各層只依賴其下層。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "36883d65-5cfb-4df0-bb2e-02b44e138396",
+      "title": "Main Program and Subroutine Architectural Style",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "程序式範式：main 呼叫 subroutine、單向控制流、資料靠參數傳遞，聚焦函式與資料流動。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "99a6f14a-2efe-4f32-a463-3449c9317bdb",
+      "title": "Microservices Architecture",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Web Service",
+      "summary": "把系統拆成獨立部署、各自負責單一能力的小型服務。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "6a8c0e31-65ec-471e-b7fd-48a0896f767c",
+      "title": "Model Checking",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "",
+      "summary": "以模型檢驗（model checking）形式化驗證狀態系統是否滿足性質。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "db3318b9-42ea-4a2b-85a3-80f3a5884d14",
+      "title": "OOP v.s. Main Program and Subroutine Architecture Style",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "物件導向風格與主程式/副程式程序式風格的對比。",
+      "degree": 1,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "e56bd032-f359-4021-b2c8-1948861ad787",
+      "title": "Object-Oriented Programming Style",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以物件與訊息傳遞為核心的程式設計風格，對比程序式風格。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "b54c34dd-39a5-45bf-8569-10d581ab92ae",
+      "title": "Pipes and Filters Architecture",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "資料流經一連串獨立 filter 處理、以 pipe 串接的架構風格。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "4f7b5aa7-f2de-4a45-b19b-f5f26d58b7f4",
+      "title": "Process Control",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以回饋迴圈維持受控變數於設定點的程序控制架構風格。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "8b970bb9-0514-4f67-b9f1-f66cef5b8599",
+      "title": "Process Control Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以回饋控制維持系統輸出於目標值的程序控制系統。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "7960d520-fd39-44c4-bb28-a1782278ed0e",
+      "title": "Product Line Architecture（產品線架構）",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以共用核心資產支撐一系列相關產品的產品線架構策略。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "title": "Quality Attributes (Non-functional Requirements)",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "",
+      "summary": "軟體設計要在多個競爭的品質屬性間權衡：效能、安全、可維護、可擴展等，correctness 是基本但不夠。",
+      "degree": 5,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "0d4679f7-6c37-4494-a620-b90a599aa4df",
+      "title": "Repository-based System",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以共享 repository 為中心的架構風格，多個元件透過中央資料儲存協作。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "ca2a6dee-8592-4147-843c-2343ef91cb0f",
+      "title": "State Transition Systems",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "以狀態與轉移建模系統行為的狀態轉移系統。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "5b36745b-3425-4312-a7b7-7b323a953b31",
+      "title": "架構核心",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "",
+      "summary": "架構設計的核心概念筆記。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "516a37af-b82b-4193-894e-e36d29ac5d95",
+      "title": "行為細節",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "事件驅動/微服務情境下元件間互動與觸發的行為細節。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "06a29fe0-1ec3-423a-90b5-113c9e20a56f",
+      "title": "複雜系統：MAPE-K 架構",
+      "category": "architecture-style",
+      "layer": 5,
+      "section": "Architecture",
+      "summary": "自適應系統的 Monitor-Analyze-Plan-Execute + Knowledge 迴圈，用於管理複雜、會自我調節的系統。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "889d897c-1300-483d-a2c0-f8f3b0998d1e",
+      "title": "CORBA",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "以 IDL 與 ORB 讓跨語言、跨平台物件互相呼叫的分散式物件標準。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "f8231608-2a4e-4eb2-b255-be0a9e9038d4",
+      "title": "HyperText Transport Protocol (HTTP)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "HTTP 作為 Web 系統的請求-回應通訊協定與其方法語意。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "5ff02d61-e3b0-44b7-bb87-3e0785066eaa",
+      "title": "Introduction to Web Services",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "Web Service 的基本概念與組成要素導論。",
+      "degree": 4,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "9e35dd55-2b1c-4e2c-a864-a2e3d74c31f4",
+      "title": "Markup Languages",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "HTML/XML 等標記語言在 Web 系統中的角色與結構。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "08fc5a34-b1fd-4650-a0a6-dfe3aa497c4c",
+      "title": "RESTful Web Service",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "REST 以資源（Resource）與 URI 為核心，基於 Request-Response 的 Client-Server 設計樣式。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "7c2d855a-3af6-4c87-bfe2-2c7a06ac67ff",
+      "title": "Remote Procedure Call (RPC)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "讓遠端程序呼叫如同本地函式呼叫的通訊機制。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "3b99bbc2-96e2-4201-83dc-9a1a01645492",
+      "title": "Service Composition (WS-BPEL)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "以 WS-BPEL 把多個 web service 編排組合成更大的商業流程。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "c959d900-a0f6-441d-ad18-9e1a871cd165",
+      "title": "Service Description (WSDL)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "以 WSDL 描述服務介面：接受什麼輸入、回傳什麼輸出、如何互動。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "title": "Service Invocation (SOAP)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "以 SOAP 訊息（XML）呼叫遠端服務的協議方式。",
+      "degree": 5,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "2073a82b-db11-4c1f-b596-a9f96afea11e",
+      "title": "Service Principles",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "好的 service 應 modular、composable、平台/語言無關、self-describing（WSDL）、self-advertising（UDDI）。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "8139e912-e017-4706-8cdd-ccf34372a371",
+      "title": "Service Publication and Discovery (UDDI)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "以 UDDI 註冊、發佈與發現服務，讓潛在用戶得知有哪些服務可用。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "3a073e5c-9c2e-4a65-9944-084ee26135a5",
+      "title": "Service-Oriented Architecture (SOA)",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "透過建立與組合服務、並設計支援其使用的架構來達成軟體目標。",
+      "degree": 3,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "f6b33575-4fe0-440a-aa1c-953f17d2b01e",
+      "title": "Stateless",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "無狀態設計：每個請求自帶所需資訊、伺服器不保存會話狀態，利於擴展（REST 特性）。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "b7cb2cea-acc3-48c4-b149-33fff9e08a1f",
+      "title": "Web System Architecture",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "Web 系統的整體架構組成與各層角色。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "1d9feac4-864d-49a2-95d4-4e6980070c61",
+      "title": "Web Systems Evolution",
+      "category": "web-service",
+      "layer": 6,
+      "section": "Web Service",
+      "summary": "Web 系統的演進：HTML 與 HTTP 等核心技術的發展脈絡。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "caa6ae88-7522-4b5d-9cc1-ca5da15ebd94",
+      "title": "(Method) UML Sequence Diagram",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以序列圖描述物件間隨時間的訊息互動順序。",
+      "degree": 0,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "6dafcd4f-5e1a-424c-9b82-a004169b44d6",
+      "title": "(Method) UML State Diagram",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以狀態圖描述物件在事件觸發下的狀態與轉移。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "930b63b4-c6c2-4392-9866-8d1fa2bffaf5",
+      "title": "(UML) Class Diagrams",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以類別圖表達類別、屬性、方法與類別間關係。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "c45125e1-af91-4955-8320-d573f4778ae1",
+      "title": "CRC Cards (Prototype simulation)",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "用 CRC 卡模擬情境、演練職責分配，作為概念設計的原型工具。",
+      "degree": 4,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "05a6757a-9382-4829-bf6f-9438733eea40",
+      "title": "CRC 即為概念設計方法",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "以 CRC（Class-Responsibility-Collaborator）卡進行概念層級的物件設計與職責分配。",
+      "degree": 3,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "title": "Kruchten's 4+1 View Model",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "以邏輯、開發、程序、實體四個視圖加上情境（+1）描述架構，需先知道系統對使用者的目標。",
+      "degree": 5,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "52b7d1e4-78a6-48d9-ba28-11cb314b5b57",
+      "title": "UML Activity Diagram",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以活動圖描述流程、判斷分支與並行的行為視圖。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "cfceca50-9a4a-44f2-9098-95bc7973962a",
+      "title": "UML Architecture Overview and Process",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "UML 在架構設計流程中的整體概觀與使用步驟。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "4dcdcff5-9b8c-4d61-a587-104cd5f4c570",
+      "title": "UML Class Diagram：將 Class 的 Properties 與 Methods 區分開來",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "UML 類別圖以屬性區與方法區分開呈現類別結構與關係。",
+      "degree": 0,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "d145e5b0-4648-43f9-bbf5-15c63b35442d",
+      "title": "UML Component Diagram (Physical View)",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以元件圖呈現可替換元件與其提供/需求介面的實體視圖。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "ea0cd19f-1bcb-4214-9040-bf06e66a607a",
+      "title": "UML Deployment Diagram",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以部署圖呈現軟體節點與硬體的實體佈署對應。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "90478f58-00ea-4b00-9515-87cd8cb6ceee",
+      "title": "UML Package Diagram (Physical View)",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "以套件圖呈現模組分組與相依的實體視圖。",
+      "degree": 1,
+      "noteType": "method",
+      "gaps": [
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 1.5
+    },
+    {
+      "id": "95246f7e-c3b5-4447-9f44-efcb3534b66c",
+      "title": "UML 中的 inheritance 與 implementation",
+      "category": "uml",
+      "layer": 7,
+      "section": "Apply",
+      "summary": "UML 如何以不同箭頭區分繼承（generalization）與介面實作（realization）。",
+      "degree": 2,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "39a2b693-7ec4-4a32-a8db-6f065732c77e",
+      "title": "UML 即為技術設計的工具",
+      "category": "uml",
+      "layer": 7,
+      "section": "",
+      "summary": "UML 是把概念設計轉為技術設計、與他人溝通結構與行為的視覺化工具。",
+      "degree": 2,
+      "noteType": "method",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "aadd60ef-c706-4b3c-8bdb-2286a17c8587",
+      "title": "\"|\" 就是型別的 \"or\"",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "型別註記中的 | 代表型別聯集（union），即「或」的意思。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "fae7ca16-5b0e-43e2-984f-96c85792510d",
+      "title": "(History) Evolution of Programming Languages",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "程式語言的演進史，從機器碼到高階與物件導向語言。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "39b9a02b-b8a4-4623-8491-f33304629eef",
+      "title": "(Python) Inheritance & Multiple Inheritance",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Python 的單一與多重繼承機制與 MRO 行為。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "41e5a619-fc08-4a82-90d5-5f0b8838ac49",
+      "title": "Java Grammar",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "Java 基本語法要點。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "4aa14ed8-9804-4aa0-83a3-c51ec3669518",
+      "title": "Java v.s. JavaScript",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "Java 與 JavaScript 在型別、執行模型與用途上的差異比較。",
+      "degree": 1,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "cfc1bcb6-9e75-447f-9914-61ecfaf8c513",
+      "title": "Java v.s. Python",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Java 與 Python 在型別系統、語法與執行模型上的差異比較。",
+      "degree": 2,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "91525b73-f472-42bb-8eed-82651ef7538e",
+      "title": "JavaScript",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Web Service",
+      "summary": "JavaScript 語言特性與行為筆記。",
+      "degree": 0,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "02533016-3cbd-4160-8441-d63a2b37c4d8",
+      "title": "Python 一個檔案裡的層",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "模組層 import 時執行一次、class/method/function 層呼叫時才執行，關鍵差異在「什麼時候執行」。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "4465368f-0009-411f-9eef-406f049a44f8",
+      "title": "Python 的 @decorator 語法和 Decorator Pattern 是同一件事嗎？",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "區分 Python @decorator 語法糖與 GoF Decorator Pattern 的本質差異。",
+      "degree": 2,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "c2b3a689-1340-4328-bfc3-093538953ee1",
+      "title": "Python 的設計哲學：用一個語法統一所有繼承",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Python 以單一 class 語法統一處理單一與多重繼承的設計哲學。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        }
+      ],
+      "focusScore": 3.0
+    },
+    {
+      "id": "6b2eb940-afbf-4ee2-936c-6b54e3bc6847",
+      "title": "Python 社群約定",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Python 社群慣例（PEP 風格、命名、慣用寫法）等約定。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "381ddb96-a558-4836-a3ce-1f833d06836d",
+      "title": "具名/位置參數",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Python 函式呼叫的位置參數與具名參數（keyword arguments）之差異與用法。",
+      "degree": 1,
+      "noteType": "literature",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    },
+    {
+      "id": "444a3e66-1455-4f05-a43d-846a9f2094d1",
+      "title": "在 Python 之中我要怎麼知道包的是 object 還是 function?",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "Design Pattern",
+      "summary": "Python 中如何判斷被裝飾/包裝的對象是物件還是函式。",
+      "degree": 1,
+      "noteType": "question",
+      "gaps": [
+        {
+          "key": "open-question",
+          "reason": "你提的問題還沒收斂成洞察"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.0
+    },
+    {
+      "id": "8d91d66c-1430-40e8-8bc3-06347e9e8248",
+      "title": "程式的 LifeCycle",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "程式從載入（load time）到執行（run time）各階段的生命週期。",
+      "degree": 2,
+      "noteType": "literature",
+      "gaps": [],
+      "focusScore": 0.0
+    },
+    {
+      "id": "f2329d39-d4af-42b3-9232-db44ce01f586",
+      "title": "靜態/動態語言",
+      "category": "language-mechanic",
+      "layer": 8,
+      "section": "",
+      "summary": "靜態型別與動態型別語言在型別檢查時機與取捨上的差異。",
+      "degree": 1,
+      "noteType": "concept-collision",
+      "gaps": [
+        {
+          "key": "undigested",
+          "reason": "已吸收別人觀點,但還沒長出自己的永久筆記"
+        },
+        {
+          "key": "isolated",
+          "reason": "知識孤島,還沒跟其他卡片碰撞"
+        }
+      ],
+      "focusScore": 4.5
+    }
+  ],
+  "links": [
+    {
+      "source": "8d1230d5-0d29-4d24-a75e-ad8123ab9ed1",
+      "target": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "61777a84-21ad-4215-b98c-3c237ce0b532",
+      "target": "ab51fe44-f213-49e2-9e0a-09375a3e48a0",
+      "type": "connection"
+    },
+    {
+      "source": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "target": "8d91d66c-1430-40e8-8bc3-06347e9e8248",
+      "type": "connection"
+    },
+    {
+      "source": "7895b8a7-9515-4a70-9292-08ddb60e6704",
+      "target": "175ee54e-cded-4161-adbb-262bacc61943",
+      "type": "connection"
+    },
+    {
+      "source": "cfc1bcb6-9e75-447f-9914-61ecfaf8c513",
+      "target": "c2b3a689-1340-4328-bfc3-093538953ee1",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "3f2d2a43-f3ec-416f-b702-27755ba8f452",
+      "target": "ca2a6dee-8592-4147-843c-2343ef91cb0f",
+      "type": "connection"
+    },
+    {
+      "source": "b5f1115f-4caa-44fe-a91b-473f9d711b97",
+      "target": "d5ccc19b-2d72-4fa6-a428-60646af53a98",
+      "type": "connection"
+    },
+    {
+      "source": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "target": "2a72da4c-a478-430b-993c-28c037359507",
+      "type": "connection"
+    },
+    {
+      "source": "82fc0de5-7ad0-4992-9e8e-c636cad87bae",
+      "target": "522b1f1c-2cd4-498a-9e1d-212632b8e8d6",
+      "type": "connection"
+    },
+    {
+      "source": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "target": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "type": "connection"
+    },
+    {
+      "source": "b852c249-ea62-4803-b0a5-a890bd5ac7ce",
+      "target": "e57ef283-236d-4775-9270-6c92d3abbb5d",
+      "type": "connection"
+    },
+    {
+      "source": "b80293ad-bd4d-4d69-afbd-0e430b34af97",
+      "target": "9c279b83-6e6d-4df7-aac1-82296ed959f6",
+      "type": "connection"
+    },
+    {
+      "source": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "target": "ea0cd19f-1bcb-4214-9040-bf06e66a607a",
+      "type": "connection"
+    },
+    {
+      "source": "19a04ede-9857-4c99-a25f-d32ac497152a",
+      "target": "fae7ca16-5b0e-43e2-984f-96c85792510d",
+      "type": "connection"
+    },
+    {
+      "source": "18941894-8d2c-4f67-870f-e2a713c98884",
+      "target": "a1a31571-d992-493e-8adf-50117e205677",
+      "type": "connection"
+    },
+    {
+      "source": "551780b2-169f-48a8-9683-3055274620aa",
+      "target": "d3089af0-1e7a-4996-ae42-f38b224e805d",
+      "type": "connection"
+    },
+    {
+      "source": "1812e9d5-6f35-457f-8ceb-b7a5f5874c68",
+      "target": "6b2eb940-afbf-4ee2-936c-6b54e3bc6847",
+      "type": "connection"
+    },
+    {
+      "source": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "target": "05a6757a-9382-4829-bf6f-9438733eea40",
+      "type": "connection"
+    },
+    {
+      "source": "e56bd032-f359-4021-b2c8-1948861ad787",
+      "target": "db3318b9-42ea-4a2b-85a3-80f3a5884d14",
+      "type": "connection"
+    },
+    {
+      "source": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "target": "671f506d-79b5-4822-8ac2-19349411ddb9",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "1c5dd5a1-46bf-4a4a-a82a-5680302c3409",
+      "type": "connection"
+    },
+    {
+      "source": "95246f7e-c3b5-4447-9f44-efcb3534b66c",
+      "target": "f92c8764-f9d5-47b1-8331-7cb1ed50a5af",
+      "type": "connection"
+    },
+    {
+      "source": "46153885-ca57-4ae1-aee9-22e2c2c63ede",
+      "target": "da6fc19f-11fb-4431-87fb-721a665684ac",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "e9ac9cdd-fbfc-4428-90a4-561a3a92dd5d",
+      "type": "connection"
+    },
+    {
+      "source": "dd429fa0-a9f9-4fb6-87c1-f972b7dca234",
+      "target": "6f94f29d-0127-452e-beaf-659ea5b9eca9",
+      "type": "connection"
+    },
+    {
+      "source": "d526cc36-1644-44f7-b190-5568babf140c",
+      "target": "babf49b2-7ddd-4def-9a1c-11c08349cf6d",
+      "type": "connection"
+    },
+    {
+      "source": "1812e9d5-6f35-457f-8ceb-b7a5f5874c68",
+      "target": "cfc1bcb6-9e75-447f-9914-61ecfaf8c513",
+      "type": "connection"
+    },
+    {
+      "source": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "target": "dd429fa0-a9f9-4fb6-87c1-f972b7dca234",
+      "type": "connection"
+    },
+    {
+      "source": "92775254-546d-40fc-8734-9941d65e9dfc",
+      "target": "1812e9d5-6f35-457f-8ceb-b7a5f5874c68",
+      "type": "connection"
+    },
+    {
+      "source": "4465368f-0009-411f-9eef-406f049a44f8",
+      "target": "444a3e66-1455-4f05-a43d-846a9f2094d1",
+      "type": "connection"
+    },
+    {
+      "source": "1e849702-632b-4792-b17e-6b3c7b547f3d",
+      "target": "fd7a03ca-8e46-4be9-b7f1-d473cbad274c",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "8b970bb9-0514-4f67-b9f1-f66cef5b8599",
+      "type": "connection"
+    },
+    {
+      "source": "cfceca50-9a4a-44f2-9098-95bc7973962a",
+      "target": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "type": "connection"
+    },
+    {
+      "source": "5ff02d61-e3b0-44b7-bb87-3e0785066eaa",
+      "target": "08fc5a34-b1fd-4650-a0a6-dfe3aa497c4c",
+      "type": "connection"
+    },
+    {
+      "source": "39388ab6-c241-4b91-8fdf-0bcffd4ea436",
+      "target": "92775254-546d-40fc-8734-9941d65e9dfc",
+      "type": "connection"
+    },
+    {
+      "source": "78a882b5-3cf9-4101-b667-c9a677bb9e11",
+      "target": "d306e3d6-6937-408e-8af9-ab9dea9e0538",
+      "type": "connection"
+    },
+    {
+      "source": "551780b2-169f-48a8-9683-3055274620aa",
+      "target": "299fb0e5-e625-416f-aeb0-fed19b6209e2",
+      "type": "connection"
+    },
+    {
+      "source": "5ff02d61-e3b0-44b7-bb87-3e0785066eaa",
+      "target": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "type": "connection"
+    },
+    {
+      "source": "c96770c6-cda7-4038-813f-e9fecea60696",
+      "target": "7895b8a7-9515-4a70-9292-08ddb60e6704",
+      "type": "connection"
+    },
+    {
+      "source": "c45125e1-af91-4955-8320-d573f4778ae1",
+      "target": "fa2199b9-9b16-4197-ab0a-bd6b9aa0953b",
+      "type": "connection"
+    },
+    {
+      "source": "1812e9d5-6f35-457f-8ceb-b7a5f5874c68",
+      "target": "39b9a02b-b8a4-4623-8491-f33304629eef",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "type": "connection"
+    },
+    {
+      "source": "41e5a619-fc08-4a82-90d5-5f0b8838ac49",
+      "target": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "type": "connection"
+    },
+    {
+      "source": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "target": "54576cbd-5b50-421d-a481-b752c89ec499",
+      "type": "connection"
+    },
+    {
+      "source": "61777a84-21ad-4215-b98c-3c237ce0b532",
+      "target": "18941894-8d2c-4f67-870f-e2a713c98884",
+      "type": "connection"
+    },
+    {
+      "source": "a3a06767-1e6c-4d64-948e-11eff923eed2",
+      "target": "18941894-8d2c-4f67-870f-e2a713c98884",
+      "type": "connection"
+    },
+    {
+      "source": "08fc5a34-b1fd-4650-a0a6-dfe3aa497c4c",
+      "target": "f6b33575-4fe0-440a-aa1c-953f17d2b01e",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "f9dcfddc-1825-4347-b862-9674b9f665e2",
+      "type": "connection"
+    },
+    {
+      "source": "b80293ad-bd4d-4d69-afbd-0e430b34af97",
+      "target": "95246f7e-c3b5-4447-9f44-efcb3534b66c",
+      "type": "connection"
+    },
+    {
+      "source": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "target": "abd11823-74d5-4495-a210-cba25ce44f32",
+      "type": "connection"
+    },
+    {
+      "source": "175ee54e-cded-4161-adbb-262bacc61943",
+      "target": "516a37af-b82b-4193-894e-e36d29ac5d95",
+      "type": "connection"
+    },
+    {
+      "source": "671f506d-79b5-4822-8ac2-19349411ddb9",
+      "target": "e17df596-2fd2-4dfd-b2fd-3aa061e18aa8",
+      "type": "connection"
+    },
+    {
+      "source": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "target": "c45125e1-af91-4955-8320-d573f4778ae1",
+      "type": "connection"
+    },
+    {
+      "source": "7106f93d-d69c-4198-8744-cd1086103d01",
+      "target": "caf8a1ef-000c-448e-a7c1-86e0ce810fe4",
+      "type": "connection"
+    },
+    {
+      "source": "8d1230d5-0d29-4d24-a75e-ad8123ab9ed1",
+      "target": "b74a4514-e2ac-45b8-9882-da2eeeb754e6",
+      "type": "connection"
+    },
+    {
+      "source": "39388ab6-c241-4b91-8fdf-0bcffd4ea436",
+      "target": "125d051c-a3c3-48a3-a0bb-8de4dd224b58",
+      "type": "connection"
+    },
+    {
+      "source": "1c5dd5a1-46bf-4a4a-a82a-5680302c3409",
+      "target": "485d22f4-4ce2-4a35-9926-fce99adb3add",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "e6b5192f-afff-448b-a6a7-3caa81dccb30",
+      "target": "930b63b4-c6c2-4392-9866-8d1fa2bffaf5",
+      "type": "connection"
+    },
+    {
+      "source": "522b1f1c-2cd4-498a-9e1d-212632b8e8d6",
+      "target": "da6fc19f-11fb-4431-87fb-721a665684ac",
+      "type": "connection"
+    },
+    {
+      "source": "2e45e93f-46c3-4ba9-b4cd-b7bf98a7b11f",
+      "target": "36883d65-5cfb-4df0-bb2e-02b44e138396",
+      "type": "connection"
+    },
+    {
+      "source": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "target": "3cdef23d-17ea-4258-8c7e-e7788d43d4a3",
+      "type": "connection"
+    },
+    {
+      "source": "a79322d4-20c4-49fd-bbc0-ec93b869226d",
+      "target": "8abab9c2-705d-438d-8301-883b11d0b480",
+      "type": "connection"
+    },
+    {
+      "source": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "target": "54576cbd-5b50-421d-a481-b752c89ec499",
+      "type": "connection"
+    },
+    {
+      "source": "fa2199b9-9b16-4197-ab0a-bd6b9aa0953b",
+      "target": "19a04ede-9857-4c99-a25f-d32ac497152a",
+      "type": "connection"
+    },
+    {
+      "source": "8ae0390c-b109-4d55-9a4a-25690e6cadc2",
+      "target": "6245d233-0e1b-496e-8fcc-3a7320abd710",
+      "type": "connection"
+    },
+    {
+      "source": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "target": "0e298b7b-f2f8-4622-8a95-d516b1770343",
+      "type": "connection"
+    },
+    {
+      "source": "e17df596-2fd2-4dfd-b2fd-3aa061e18aa8",
+      "target": "7106f93d-d69c-4198-8744-cd1086103d01",
+      "type": "connection"
+    },
+    {
+      "source": "2a72da4c-a478-430b-993c-28c037359507",
+      "target": "409e5e23-39e2-4af3-b2e7-627e0731ff96",
+      "type": "connection"
+    },
+    {
+      "source": "f92c8764-f9d5-47b1-8331-7cb1ed50a5af",
+      "target": "8ae0390c-b109-4d55-9a4a-25690e6cadc2",
+      "type": "connection"
+    },
+    {
+      "source": "3a073e5c-9c2e-4a65-9944-084ee26135a5",
+      "target": "b7cb2cea-acc3-48c4-b149-33fff9e08a1f",
+      "type": "connection"
+    },
+    {
+      "source": "3f2d2a43-f3ec-416f-b702-27755ba8f452",
+      "target": "79c2620c-663b-46dd-a1aa-117fca15f9fd",
+      "type": "connection"
+    },
+    {
+      "source": "ad616507-a61a-40a1-a637-9556424fce3b",
+      "target": "04b62dd4-c5e1-4a6f-8931-4dbe44ba994a",
+      "type": "connection"
+    },
+    {
+      "source": "0d4679f7-6c37-4494-a620-b90a599aa4df",
+      "target": "36f53ad8-c2e4-40d4-ae83-7dc7e989a37f",
+      "type": "connection"
+    },
+    {
+      "source": "82fc0de5-7ad0-4992-9e8e-c636cad87bae",
+      "target": "1b56b7d6-a1df-4888-805d-fde7f02968ad",
+      "type": "connection"
+    },
+    {
+      "source": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "target": "b852c249-ea62-4803-b0a5-a890bd5ac7ce",
+      "type": "connection"
+    },
+    {
+      "source": "b80293ad-bd4d-4d69-afbd-0e430b34af97",
+      "target": "18941894-8d2c-4f67-870f-e2a713c98884",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "c96770c6-cda7-4038-813f-e9fecea60696",
+      "type": "connection"
+    },
+    {
+      "source": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "target": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "type": "connection"
+    },
+    {
+      "source": "39b9a02b-b8a4-4623-8491-f33304629eef",
+      "target": "6774c2cf-f38c-4860-9ff7-82bec23c7761",
+      "type": "connection"
+    },
+    {
+      "source": "fd7a03ca-8e46-4be9-b7f1-d473cbad274c",
+      "target": "19a04ede-9857-4c99-a25f-d32ac497152a",
+      "type": "connection"
+    },
+    {
+      "source": "3a073e5c-9c2e-4a65-9944-084ee26135a5",
+      "target": "2073a82b-db11-4c1f-b596-a9f96afea11e",
+      "type": "connection"
+    },
+    {
+      "source": "92775254-546d-40fc-8734-9941d65e9dfc",
+      "target": "bc9eaec3-c34b-4d11-9e5b-d999a4252c26",
+      "type": "connection"
+    },
+    {
+      "source": "e56bd032-f359-4021-b2c8-1948861ad787",
+      "target": "eca36852-d6dc-49e7-8578-8dca4e6cd5e7",
+      "type": "connection"
+    },
+    {
+      "source": "8b970bb9-0514-4f67-b9f1-f66cef5b8599",
+      "target": "4f7b5aa7-f2de-4a45-b19b-f5f26d58b7f4",
+      "type": "connection"
+    },
+    {
+      "source": "31b98f1c-d5c6-478e-b0b1-98f497602fcd",
+      "target": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "target": "e57ef283-236d-4775-9270-6c92d3abbb5d",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "6f94f29d-0127-452e-beaf-659ea5b9eca9",
+      "target": "d48cd2cc-6c72-4ab5-8ece-d4d4c3cd07d7",
+      "type": "connection"
+    },
+    {
+      "source": "1c5dd5a1-46bf-4a4a-a82a-5680302c3409",
+      "target": "45c00ef7-109c-4471-bdef-3e331c79b63b",
+      "type": "connection"
+    },
+    {
+      "source": "babf49b2-7ddd-4def-9a1c-11c08349cf6d",
+      "target": "7960d520-fd39-44c4-bb28-a1782278ed0e",
+      "type": "connection"
+    },
+    {
+      "source": "82fc0de5-7ad0-4992-9e8e-c636cad87bae",
+      "target": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "type": "connection"
+    },
+    {
+      "source": "a1a31571-d992-493e-8adf-50117e205677",
+      "target": "80a6ea82-85ee-42b7-ae44-edb5ea207484",
+      "type": "connection"
+    },
+    {
+      "source": "a1a31571-d992-493e-8adf-50117e205677",
+      "target": "02533016-3cbd-4160-8441-d63a2b37c4d8",
+      "type": "connection"
+    },
+    {
+      "source": "5ff02d61-e3b0-44b7-bb87-3e0785066eaa",
+      "target": "99a6f14a-2efe-4f32-a463-3449c9317bdb",
+      "type": "connection"
+    },
+    {
+      "source": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "target": "8139e912-e017-4706-8cdd-ccf34372a371",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "2e45e93f-46c3-4ba9-b4cd-b7bf98a7b11f",
+      "target": "e56bd032-f359-4021-b2c8-1948861ad787",
+      "type": "connection"
+    },
+    {
+      "source": "3caf9638-b245-45f9-bfe3-2609d142accb",
+      "target": "8d1230d5-0d29-4d24-a75e-ad8123ab9ed1",
+      "type": "connection"
+    },
+    {
+      "source": "61777a84-21ad-4215-b98c-3c237ce0b532",
+      "target": "cbea811d-d58b-4d08-af82-e8a9d11c5080",
+      "type": "connection"
+    },
+    {
+      "source": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "target": "c959d900-a0f6-441d-ad18-9e1a871cd165",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "4f7b5aa7-f2de-4a45-b19b-f5f26d58b7f4",
+      "target": "06a29fe0-1ec3-423a-90b5-113c9e20a56f",
+      "type": "connection"
+    },
+    {
+      "source": "c2b3a689-1340-4328-bfc3-093538953ee1",
+      "target": "6774c2cf-f38c-4860-9ff7-82bec23c7761",
+      "type": "connection"
+    },
+    {
+      "source": "b74a4514-e2ac-45b8-9882-da2eeeb754e6",
+      "target": "5ae03416-11da-47c5-9951-9ffdf929c38d",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "4aa14ed8-9804-4aa0-83a3-c51ec3669518",
+      "target": "41e5a619-fc08-4a82-90d5-5f0b8838ac49",
+      "type": "connection"
+    },
+    {
+      "source": "8ae0390c-b109-4d55-9a4a-25690e6cadc2",
+      "target": "6774c2cf-f38c-4860-9ff7-82bec23c7761",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "3f2d2a43-f3ec-416f-b702-27755ba8f452",
+      "type": "connection"
+    },
+    {
+      "source": "abd11823-74d5-4495-a210-cba25ce44f32",
+      "target": "7405197f-b69c-4255-9390-4f645d8af3bd",
+      "type": "connection"
+    },
+    {
+      "source": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "target": "d145e5b0-4648-43f9-bbf5-15c63b35442d",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "9f0bc546-57ae-4e47-9af2-e5e54cb05bd0",
+      "type": "connection"
+    },
+    {
+      "source": "c45125e1-af91-4955-8320-d573f4778ae1",
+      "target": "39a2b693-7ec4-4a32-a8db-6f065732c77e",
+      "type": "connection"
+    },
+    {
+      "source": "e9ac9cdd-fbfc-4428-90a4-561a3a92dd5d",
+      "target": "b54c34dd-39a5-45bf-8569-10d581ab92ae",
+      "type": "connection"
+    },
+    {
+      "source": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "target": "5ae03416-11da-47c5-9951-9ffdf929c38d",
+      "type": "connection"
+    },
+    {
+      "source": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "target": "52b7d1e4-78a6-48d9-ba28-11cb314b5b57",
+      "type": "connection"
+    },
+    {
+      "source": "c45125e1-af91-4955-8320-d573f4778ae1",
+      "target": "05a6757a-9382-4829-bf6f-9438733eea40",
+      "type": "connection"
+    },
+    {
+      "source": "fd7a03ca-8e46-4be9-b7f1-d473cbad274c",
+      "target": "30577c75-0ed8-431b-b1d7-fb6712225516",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "0d4679f7-6c37-4494-a620-b90a599aa4df",
+      "type": "connection"
+    },
+    {
+      "source": "3a073e5c-9c2e-4a65-9944-084ee26135a5",
+      "target": "1d9feac4-864d-49a2-95d4-4e6980070c61",
+      "type": "connection"
+    },
+    {
+      "source": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "target": "b7271804-1e3f-4c2b-8476-183132d6d59e",
+      "type": "connection"
+    },
+    {
+      "source": "19a04ede-9857-4c99-a25f-d32ac497152a",
+      "target": "f6fda5d6-f658-404c-bbc8-cd8591f530b9",
+      "type": "connection"
+    },
+    {
+      "source": "53d0c051-5867-43d2-beda-1ccac15bef8b",
+      "target": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "type": "connection"
+    },
+    {
+      "source": "6dafcd4f-5e1a-424c-9b82-a004169b44d6",
+      "target": "6a8c0e31-65ec-471e-b7fd-48a0896f767c",
+      "type": "connection"
+    },
+    {
+      "source": "08fc5a34-b1fd-4650-a0a6-dfe3aa497c4c",
+      "target": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "type": "connection",
+      "label": "兩種完全不同的協議方式",
+      "twoWay": true
+    },
+    {
+      "source": "29210f22-4990-44c2-af59-d0b5188ccc1e",
+      "target": "90478f58-00ea-4b00-9515-87cd8cb6ceee",
+      "type": "connection"
+    },
+    {
+      "source": "9bb8cc36-4797-4b59-be39-c17f5f805551",
+      "target": "26d944d0-98f2-456e-b017-bea0950ff059",
+      "type": "connection"
+    },
+    {
+      "source": "516a37af-b82b-4193-894e-e36d29ac5d95",
+      "target": "9bb8cc36-4797-4b59-be39-c17f5f805551",
+      "type": "connection"
+    },
+    {
+      "source": "3a3ccc94-0d0c-4554-a7bd-be0adc82cbc5",
+      "target": "d526cc36-1644-44f7-b190-5568babf140c",
+      "type": "connection"
+    },
+    {
+      "source": "e6b5192f-afff-448b-a6a7-3caa81dccb30",
+      "target": "a1a31571-d992-493e-8adf-50117e205677",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "type": "connection"
+    },
+    {
+      "source": "b5f1115f-4caa-44fe-a91b-473f9d711b97",
+      "target": "579d0b00-ed24-4977-b650-cf32986767dd",
+      "type": "connection"
+    },
+    {
+      "source": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "target": "4465368f-0009-411f-9eef-406f049a44f8",
+      "type": "connection"
+    },
+    {
+      "source": "95cbfd2f-ad0f-4c4a-9c0f-797bc3a8fa69",
+      "target": "3caf9638-b245-45f9-bfe3-2609d142accb",
+      "type": "connection"
+    },
+    {
+      "source": "92775254-546d-40fc-8734-9941d65e9dfc",
+      "target": "aadd60ef-c706-4b3c-8bdb-2286a17c8587",
+      "type": "connection"
+    },
+    {
+      "source": "05a6757a-9382-4829-bf6f-9438733eea40",
+      "target": "39a2b693-7ec4-4a32-a8db-6f065732c77e",
+      "type": "connection"
+    },
+    {
+      "source": "e57ef283-236d-4775-9270-6c92d3abbb5d",
+      "target": "b5f1115f-4caa-44fe-a91b-473f9d711b97",
+      "type": "connection"
+    },
+    {
+      "source": "c9c52d4a-6aa0-47a3-b8c2-778db9627835",
+      "target": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "type": "connection"
+    },
+    {
+      "source": "a3a06767-1e6c-4d64-948e-11eff923eed2",
+      "target": "cbea811d-d58b-4d08-af82-e8a9d11c5080",
+      "type": "connection"
+    },
+    {
+      "source": "3caf9638-b245-45f9-bfe3-2609d142accb",
+      "target": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "type": "connection"
+    },
+    {
+      "source": "9f0bc546-57ae-4e47-9af2-e5e54cb05bd0",
+      "target": "1c5dd5a1-46bf-4a4a-a82a-5680302c3409",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "target": "2378fca9-8d36-48d5-988e-5ddf0e404f92",
+      "type": "connection"
+    },
+    {
+      "source": "5ff02d61-e3b0-44b7-bb87-3e0785066eaa",
+      "target": "7c2d855a-3af6-4c87-bfe2-2c7a06ac67ff",
+      "type": "connection"
+    },
+    {
+      "source": "e6b5192f-afff-448b-a6a7-3caa81dccb30",
+      "target": "9f2df446-0339-428d-b583-2251761f657d",
+      "type": "connection"
+    },
+    {
+      "source": "0e298b7b-f2f8-4622-8a95-d516b1770343",
+      "target": "9dc4d103-a03a-4f4f-ae83-1c2671c9af16",
+      "type": "connection"
+    },
+    {
+      "source": "d5ccc19b-2d72-4fa6-a428-60646af53a98",
+      "target": "381ddb96-a558-4836-a3ce-1f833d06836d",
+      "type": "connection"
+    },
+    {
+      "source": "8d91d66c-1430-40e8-8bc3-06347e9e8248",
+      "target": "f2329d39-d4af-42b3-9232-db44ce01f586",
+      "type": "connection"
+    },
+    {
+      "source": "b74a4514-e2ac-45b8-9882-da2eeeb754e6",
+      "target": "a2bc2280-a9be-4f99-9620-c070df943362",
+      "type": "connection"
+    },
+    {
+      "source": "fae7ca16-5b0e-43e2-984f-96c85792510d",
+      "target": "cf802782-10b7-4c77-befb-e4da7421d495",
+      "type": "connection"
+    },
+    {
+      "source": "823ca019-c9e8-4ee4-92aa-958aa467bd8c",
+      "target": "2a335fc8-fc23-4247-ac3d-a8147b3c2366",
+      "type": "connection"
+    },
+    {
+      "source": "f9dcfddc-1825-4347-b862-9674b9f665e2",
+      "target": "485d22f4-4ce2-4a35-9926-fce99adb3add",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "7c2d855a-3af6-4c87-bfe2-2c7a06ac67ff",
+      "target": "889d897c-1300-483d-a2c0-f8f3b0998d1e",
+      "type": "connection"
+    },
+    {
+      "source": "fec090a7-50f4-4c00-acd4-fa8a95cb53ad",
+      "target": "485d22f4-4ce2-4a35-9926-fce99adb3add",
+      "type": "connection"
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "551780b2-169f-48a8-9683-3055274620aa",
+      "type": "connection"
+    },
+    {
+      "source": "61777a84-21ad-4215-b98c-3c237ce0b532",
+      "target": "a79322d4-20c4-49fd-bbc0-ec93b869226d",
+      "type": "connection"
+    },
+    {
+      "source": "00ae59f0-898a-44a5-ad2a-8c2328f81a2f",
+      "target": "3cdef23d-17ea-4258-8c7e-e7788d43d4a3",
+      "type": "connection"
+    },
+    {
+      "source": "642b2c2c-6654-455f-836d-a3b6a6822044",
+      "target": "485d22f4-4ce2-4a35-9926-fce99adb3add",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "ad616507-a61a-40a1-a637-9556424fce3b",
+      "target": "bcf7a256-b273-4ffc-b821-61216bf50d33",
+      "type": "connection"
+    },
+    {
+      "source": "b852c249-ea62-4803-b0a5-a890bd5ac7ce",
+      "target": "39388ab6-c241-4b91-8fdf-0bcffd4ea436",
+      "type": "connection"
+    },
+    {
+      "source": "5e31a855-862c-49ea-bee4-94ab9042210b",
+      "target": "3b99bbc2-96e2-4201-83dc-9a1a01645492",
+      "type": "connection",
+      "twoWay": true
+    },
+    {
+      "source": "d0d1c71c-de1b-4865-9a25-eb75caeffa1a",
+      "target": "2e45e93f-46c3-4ba9-b4cd-b7bf98a7b11f",
+      "type": "connection"
+    }
+  ]
+}

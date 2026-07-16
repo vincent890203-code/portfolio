@@ -12,15 +12,17 @@ import { getFeaturedProjects } from "@/content/loader";
 const SECOND_BRAIN = [
   {
     title: "知識圖譜",
-    desc: "互動式 force graph,呈現我所有課程與知識節點的連結。",
-    status: "PHASE 3 · 建置中",
-    accentClass: "text-warm",
+    desc: "互動式 3D 神經網路:把軟體架構的學習碰撞成一張圖,外圈是別人的知識,核心是我的永久筆記。",
+    status: "PHASE 3 · 上線",
+    accentClass: "text-cool",
+    href: "/brain",
   },
   {
     title: "問我的第二大腦",
     desc: "RAG 驅動的對話介面,直接問它我會什麼、學過什麼,附引用來源。",
     status: "PHASE 4 · 規劃中",
-    accentClass: "text-cool",
+    accentClass: "text-warm",
+    href: undefined as string | undefined,
   },
 ];
 
@@ -137,20 +139,38 @@ export default function Home() {
       {/* 第二大腦預告 */}
       <section className="mx-auto max-w-4xl px-6 pb-24">
         <div className="grid gap-6 md:grid-cols-2">
-          {SECOND_BRAIN.map((c) => (
-            <div
-              key={c.title}
-              className="rounded-2xl border border-line bg-surface p-8 transition-transform duration-300 hover:-translate-y-1"
-            >
-              <p
-                className={`mb-4 font-mono text-[11px] tracking-widest ${c.accentClass}`}
+          {SECOND_BRAIN.map((c) => {
+            const inner = (
+              <>
+                <p
+                  className={`mb-4 font-mono text-[11px] tracking-widest ${c.accentClass}`}
+                >
+                  {c.status}
+                </p>
+                <h3 className="text-2xl font-medium">{c.title}</h3>
+                <p className="mt-3 leading-relaxed text-dim">{c.desc}</p>
+                {c.href && (
+                  <p className="mt-4 font-mono text-sm text-cool">探索圖譜 →</p>
+                )}
+              </>
+            );
+            return c.href ? (
+              <Link
+                key={c.title}
+                href={c.href}
+                className="rounded-2xl border border-line bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-cool/50"
               >
-                {c.status}
-              </p>
-              <h3 className="text-2xl font-medium">{c.title}</h3>
-              <p className="mt-3 leading-relaxed text-dim">{c.desc}</p>
-            </div>
-          ))}
+                {inner}
+              </Link>
+            ) : (
+              <div
+                key={c.title}
+                className="rounded-2xl border border-line bg-surface p-8 transition-transform duration-300 hover:-translate-y-1"
+              >
+                {inner}
+              </div>
+            );
+          })}
         </div>
       </section>
 
