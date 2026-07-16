@@ -60,7 +60,16 @@ dim:     #8A93AD   次要文字
 - 社群連結:GitHub、LinkedIn、Email、Line、Threads、履歷 PDF
 - Coursera 課程清單(同時是 Phase 2 知識庫第一批資料)
 
+## 開發原則(重要)
+- **實作任何功能前,先上網/GitHub 找有沒有現成的類似 repo 或函式庫**,
+  優先參考、採用成熟方案,不要一頭栽進手刻。找到後評估「借用其做法/技術棧」
+  vs「整包採用」,把結論講清楚再動工。(例:Phase 3 的 3D 圖譜參考
+  graphrag-workbench 的技術棧,而非自己從零刻。)
+- 後端/資料/ML/RAG 用 Python,且依 SOLID + 設計模式寫成可插拔、可單元測試
+  的結構(Repository/Strategy/依賴反轉);前端 viz 用 Next.js/TS。
+- 驗證要用 production build(dev 的 StrictMode 會有假警告)。
+
 ## 慣例
 - Commit 訊息用英文,遵循 conventional commits
-- 元件放 `components/`,內容資料放 `content/`
+- 元件放 `components/`,內容資料放 `content/`;分析大腦放 `analysis/`(Python)
 - 每完成一個區塊,手機檢視驗一次再繼續
