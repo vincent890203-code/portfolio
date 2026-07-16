@@ -105,6 +105,15 @@ export default function KnowledgeGraph({ data }: { data: GraphData }) {
       const scene = fg.scene?.();
       if (scene) scene.fog = new THREE.FogExp2(0x0a0f1e, 0.0018);
 
+      // 借鏡 graphrag-workbench:ACES 色調映射把高光壓縮 roll-off,
+      // 避免放大時重疊的輝光疊加成純白(爆亮的根因)。
+      const renderer = fg.renderer?.();
+      if (renderer) {
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
+        renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+      }
+
       if (!reduced) {
         try {
           const { UnrealBloomPass } = await import(
@@ -112,11 +121,12 @@ export default function KnowledgeGraph({ data }: { data: GraphData }) {
           );
           const composer = fg.postProcessingComposer?.();
           if (composer) {
+            // graphrag-workbench 實測值:低強度、高 threshold → 只有夠亮的核心發光。
             const bloom = new UnrealBloomPass(
               new THREE.Vector2(size.w || 800, size.h || 600),
-              1.6,
-              0.85,
-              0.1
+              0.66, // strength(原 1.6,太強)
+              1.35, // radius
+              0.2 // threshold(原 0.1;提高後外圈不再整片爆白)
             );
             composer.addPass(bloom);
           }
@@ -203,9 +213,9 @@ export default function KnowledgeGraph({ data }: { data: GraphData }) {
           setSelected(n);
           const fg = fgRef.current;
           if (fg && n.x !== undefined) {
-            // 相機停在節點前方固定距離,看向該節點(不飛向原點)。
+            // 相機停在節點前方固定距離,看向該節點(不飛向原點、不貼太近爆亮)。
             fg.cameraPosition(
-              { x: n.x, y: n.y, z: (n.z ?? 0) + 90 },
+              { x: n.x, y: n.y, z: (n.z ?? 0) + 170 },
               { x: n.x, y: n.y, z: n.z ?? 0 },
               1000
             );
