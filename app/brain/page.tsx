@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import KnowledgeGraph, { type GraphData } from "@/components/KnowledgeGraph.client";
 import GraphLegend from "@/components/GraphLegend";
-import graph from "@/content/graph/software-architecture.json";
+import { loadGraph } from "@/lib/graphSource";
 
 export const metadata: Metadata = {
   title: "第二大腦 · 知識圖譜 · 郭原辰",
@@ -10,13 +10,16 @@ export const metadata: Metadata = {
     "把「軟體設計與架構」的學習消化成一張互動知識圖譜:外圈是別人的知識,越往核心越是我碰撞出的永久筆記。",
 };
 
+// ISR:大多時候是靜態,發布新資料後每 10 分鐘自動更新一次。
+export const revalidate = 600;
+
 type GapNode = GraphData["nodes"][number] & {
   focusScore?: number;
   gaps?: { key: string; reason: string }[];
 };
 
-export default function BrainPage() {
-  const data = graph as GraphData;
+export default async function BrainPage() {
+  const data = await loadGraph();
   const permanentCount = data.nodes.filter((n) => n.noteType === "permanent").length;
 
   // 「該先消化」清單:由 Python 分析器算出的 focusScore 排序。
