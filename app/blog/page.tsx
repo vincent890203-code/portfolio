@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PostCard from "@/components/PostCard";
+import SubscribeForm from "@/components/SubscribeForm.client";
 import { getBlogPosts } from "@/lib/posts/source";
 
 export const metadata: Metadata = {
@@ -33,6 +34,10 @@ export default async function BlogPage() {
             ))}
           </div>
         )}
+
+        <div className="mt-14">
+          <SubscribeForm source="blog" />
+        </div>
       </main>
     </>
   );

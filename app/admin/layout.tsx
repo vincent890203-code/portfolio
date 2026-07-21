@@ -18,6 +18,7 @@ export default async function AdminLayout({
   const nav = [
     { href: "/admin", label: "總覽" },
     { href: "/admin/posts", label: "文章" },
+    { href: "/admin/subscribers", label: "訂閱者" },
     { href: "/admin/analytics", label: "觀測數據" },
   ];
 
