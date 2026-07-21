@@ -4,26 +4,27 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Nav from "@/components/Nav";
 import { mdxComponents } from "@/components/mdx";
-import { getAllPosts, getPost } from "@/content/loader";
+import { getBlogPost } from "@/lib/posts/source";
 
-export function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.meta.slug }));
-}
+export const dynamic = "force-dynamic";
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata {
-  const doc = getPost(params.slug);
-  if (!doc) return {};
-  return { title: `${doc.meta.title} · 郭原辰`, description: doc.meta.summary };
+}): Promise<Metadata> {
+  const post = await getBlogPost(params.slug);
+  if (!post) return {};
+  return { title: `${post.title} · 郭原辰`, description: post.summary };
 }
 
-export default function PostDetail({ params }: { params: { slug: string } }) {
-  const doc = getPost(params.slug);
-  if (!doc || doc.meta.published === false) notFound();
-  const { meta, content } = doc;
+export default async function PostDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await getBlogPost(params.slug);
+  if (!post) notFound();
 
   return (
     <>
@@ -36,13 +37,13 @@ export default function PostDetail({ params }: { params: { slug: string } }) {
           ← 返回 Blog
         </Link>
 
-        <time className="mt-6 block font-mono text-sm text-dim">{meta.date}</time>
+        <time className="mt-6 block font-mono text-sm text-dim">{post.date}</time>
         <h1 className="mt-2 text-4xl font-bold leading-tight text-text">
-          {meta.title}
+          {post.title}
         </h1>
-        {meta.tags?.length > 0 && (
+        {post.tags?.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
-            {meta.tags.map((t) => (
+            {post.tags.map((t) => (
               <span
                 key={t}
                 className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-dim"
@@ -56,7 +57,7 @@ export default function PostDetail({ params }: { params: { slug: string } }) {
         <div className="my-8 h-px w-full bg-gradient-to-r from-cool to-transparent" />
 
         <article>
-          <MDXRemote source={content} components={mdxComponents} />
+          <MDXRemote source={post.content} components={mdxComponents} />
         </article>
       </main>
     </>

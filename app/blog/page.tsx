@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PostCard from "@/components/PostCard";
-import { getAllPosts } from "@/content/loader";
+import { getBlogPosts } from "@/lib/posts/source";
 
 export const metadata: Metadata = {
   title: "Blog · 郭原辰",
   description: "從分子醫學到 AI 工程的思考筆記:架構、學習方法、第二大腦的建造過程。",
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+// 後台可即時上下架 → 動態渲染,永遠反映最新狀態。
+export const dynamic = "force-dynamic";
+
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
   return (
     <>
       <Nav />
@@ -26,7 +29,7 @@ export default function BlogPage() {
         ) : (
           <div className="grid gap-5">
             {posts.map((p) => (
-              <PostCard key={p.meta.slug} meta={p.meta} />
+              <PostCard key={p.slug} meta={{ ...p, published: true }} />
             ))}
           </div>
         )}
