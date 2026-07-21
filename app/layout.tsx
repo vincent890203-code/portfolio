@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_TC } from "next/font/google";
 import { PROFILE } from "@/content/profile";
+import AnalyticsProvider from "@/components/AnalyticsProvider.client";
 import "./globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -54,7 +55,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-Hant" className={notoSansTC.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <AnalyticsProvider />
+      </body>
     </html>
   );
 }

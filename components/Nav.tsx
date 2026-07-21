@@ -7,6 +7,8 @@ export default function Nav() {
     { href: "/", label: "首頁" },
     { href: "/projects", label: "作品" },
     { href: "/learning", label: "學習" },
+    { href: "/blog", label: "Blog" },
+    { href: "/brain", label: "第二大腦" },
   ];
   return (
     <nav className="sticky top-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur">

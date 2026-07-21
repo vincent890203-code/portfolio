@@ -34,6 +34,16 @@ export type CourseMeta = {
   appliedIn: string[]; // 對應的專案 slug(Phase 3 圖譜的邊)
 };
 
+// 部落格文章
+export type PostMeta = {
+  slug: string;
+  title: string;
+  date: string; // YYYY-MM-DD
+  summary: string;
+  tags: string[];
+  published?: boolean; // false = 草稿,不會出現在列表
+};
+
 export type Doc<M> = { meta: M; content: string };
 
 // ── 讀取工具 ──────────────────────────────────────────
@@ -50,6 +60,25 @@ function readDoc<M>(sub: string, file: string): Doc<M & { slug: string }> {
   const { data, content } = matter(raw);
   const slug = file.replace(/\.mdx$/, "");
   return { meta: { slug, ...(data as M) }, content: content.trim() };
+}
+
+// ── 通用內容集合(模組化核心)──────────────────────────
+// 每種內容(專案/課程/文章)都是一個「集合」;新增類型只要 createCollection 一行。
+export function createCollection<M>(
+  sub: string,
+  sort?: (a: Doc<M & { slug: string }>, b: Doc<M & { slug: string }>) => number
+) {
+  return {
+    all(): Doc<M & { slug: string }>[] {
+      const docs = readDir(sub).map((f) => readDoc<M>(sub, f));
+      return sort ? docs.sort(sort) : docs;
+    },
+    get(slug: string): Doc<M & { slug: string }> | null {
+      const file = `${slug}.mdx`;
+      if (!fs.existsSync(path.join(CONTENT_DIR, sub, file))) return null;
+      return readDoc<M>(sub, file);
+    },
+  };
 }
 
 // ── 專案 ──────────────────────────────────────────────
@@ -82,4 +111,29 @@ export function getCourse(slug: string): Doc<CourseMeta> | null {
   const full = path.join(CONTENT_DIR, "courses", file);
   if (!fs.existsSync(full)) return null;
   return readDoc<Omit<CourseMeta, "slug">>("courses", file);
+}
+
+// ── 部落格(用通用集合,依日期新到舊)──────────────────
+// YAML 會把未加引號的日期解析成 Date 物件,統一轉成 YYYY-MM-DD 字串。
+function normalizeDate(doc: Doc<PostMeta>): Doc<PostMeta> {
+  const d = doc.meta.date as unknown;
+  const date =
+    d instanceof Date ? d.toISOString().slice(0, 10) : String(d ?? "");
+  return { ...doc, meta: { ...doc.meta, date } };
+}
+
+const posts = createCollection<Omit<PostMeta, "slug">>("posts", (a, b) =>
+  String(a.meta.date) < String(b.meta.date) ? 1 : -1
+);
+
+export function getAllPosts(): Doc<PostMeta>[] {
+  return posts
+    .all()
+    .filter((p) => p.meta.published !== false)
+    .map(normalizeDate);
+}
+
+export function getPost(slug: string): Doc<PostMeta> | null {
+  const doc = posts.get(slug);
+  return doc ? normalizeDate(doc) : null;
 }
